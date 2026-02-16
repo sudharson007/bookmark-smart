@@ -65,7 +65,7 @@ export function BookmarkList({ userId }: { userId: string }) {
             .subscribe((status) => {
                 console.log('Realtime subscription status:', status)
                 // If subscription fails, we'll rely on manual refresh
-                if (status === 'SUBSCRIPTION_ERROR') {
+                if (status === 'CHANNEL_ERROR') {
                     console.warn('Realtime subscription failed. Using manual refresh fallback.')
                 }
             })
